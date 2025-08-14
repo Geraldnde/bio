@@ -1,22 +1,54 @@
-html {
+/* Global fix for box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Ensure body and html stretch fully */
+html,
+body {
+    width: 100%;
+    min-width: 320px;
+    /* prevents extreme shrinking on mobile */
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
+
+/* Make main sections full width */
+section {
+    width: 100%;
+}
+
 
 body {
     background-color: #0a364e;
 }
 
 .me-section {
+    /* max-width: 3000px; */
+    width: 100%;
+    min-height: 100vh;
+    /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+    text-align: center;
+    /* center text */
+    padding: 20px;
+    /* optional padding */
+    overflow: hidden;
+
     background: linear-gradient(135deg, #0a364e, #01121b);
-    height: 50vh;
     background-image: url('me33.JPG');
     background-attachment: fixed;
     /* backgroundS-attachment: scroll; */
     background-size: cover;
     background-position: top center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     z-index: 1;
     /* width:50%; */
@@ -45,6 +77,14 @@ body {
     font-size: x-large;
     color: #0df0bf;
     text-align: center;
+}
+
+.me-section h2 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    /* responsive font size */
+    word-wrap: break-word;
+    /* wrap long text */
+    margin: 0;
 }
 
 .my-name {
@@ -184,6 +224,13 @@ header {
     color: white;
     font: bold;
     font-family: Pacifico;
+    display: block;
+    white-space: nowrap;
+    /* optional if you want scrolling effect */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* prevents overflow */
+    max-width: 100%;
 }
 
 /* ABOUT ME SECTION */
@@ -500,7 +547,10 @@ header {
 
 
 .Paragraph {
-
+    flex: 1 1 250px;
+    /* responsive: min width 250px */
+    max-width: 300px;
+    box-sizing: border-box;
     text-align: center;
     font-size: x-large;
     line-height: 1.5;
