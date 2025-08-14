@@ -487,18 +487,44 @@ header {
 .volunteerism-container {
     max-width: 2500px;
     height: 100%;
-    margin: 80px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     /* flex-direction: column; */
-    gap: 100px;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 80px;
+    /* reduced from 100px so it's tighter */
+    align-items: stretch;
+    /* make sure all boxes in a row are same height */
 }
 
+
+
 .Paragraph {
-    width: 90%;
+
+    text-align: center;
+    font-size: x-large;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 40px;
+    height: 100%;
+    /* ensures equal height inside grid cells */
+    overflow: hidden;
+    background-color: #081f2e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* width: 90%;
     height: auto;
-    /* padding: 20px; */
+     padding: 20px; 
     text-align: center;
     text-justify: center;
     justify-content: center;
@@ -516,13 +542,13 @@ header {
     padding: 40px;
     border-radius: 40px;
     /* height: 600px; */
-    /* width: 450px; */
+/* width: 450px; 
     overflow: hidden;
     background-color: #081f2e;
 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* filter:drop-shadow(0 0 10px #00f);  */
-}
+    /* filter:drop-shadow(0 0 10px #00f);  
+}*/
 
 /* This is the overlay to deem each paragraph box so that my text can be brighter  */
 .Paragraph::before {
@@ -941,9 +967,9 @@ header {
     font-family: 'Segoe UI, sans-serif';
 }
 
-.skills-container {
-    /* display: grid; 
-    grid-template-columns: repeat(150px, minmax(120px, 1fr));*/
+/*.skills-container {
+     display: grid; 
+    grid-template-columns: repeat(150px, minmax(120px, 1fr));
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -951,10 +977,29 @@ header {
     gap: 70px;
     width: 90%;
     height: 1000px;
-    /* align-content: flex-start; */
+    /* align-content: flex-start; 
     background-color: #220430;
     border-radius: 30px;
     padding: 70px 60px;
+}*/
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    /* smaller gap for better containment */
+    width: 90%;
+    max-width: 1200px;
+    background-color: #220430;
+    border-radius: 30px;
+    padding: 70px 60px;
+    position: relative;
+    /* ensures positioned children are contained */
+    overflow: hidden;
+    /* hides any accidental overflow */
+    height: auto;
+    /* remove the fixed height */
 }
 
 .skill-ring {
@@ -1058,6 +1103,8 @@ header {
     transform: rotate(0deg);
     width: 200px;
     height: 200px;
+    flex-shrink: 0;
+    /* prevents shrinking in tight spaces */
 }
 
 .circle-bg {
@@ -1186,40 +1233,36 @@ header {
 .footer {
     background-color: #01070c;
     color: #eee;
-    padding: 60px 20px;
-    /* font-size: x-large; */
-    text-align: left;
-    font-size: large;
     padding: 40px 20px;
+    font-size: large;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    padding: 0 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+    /* subtle divider from bottom bar */
 }
 
+.footer-column,
 .footer-form {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    width: 100%;
-    /* background-color: #0ddf99; */
+    align-items: center;
+    text-align: center;
 }
 
+.footer-column h2,
 .footer-form h2 {
     margin-bottom: 15px;
     color: #8b2d07;
-    text-align: center;
-    text-justify: center;
 }
 
-.footer-column h2 {
-    margin-bottom: 15px;
-    color: #8b2d07;
-    text-align: center;
-    text-justify: center;
+.footer-column p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
 }
 
 .footer-column ul {
@@ -1230,69 +1273,39 @@ header {
     gap: 40px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-column ul li {
-    margin-bottom: 8px;
-    /* font-size: 30px; */
-    line-height: 2rem;
-    text-align: center;
     font-size: 1.5rem;
-    text-justify: center;
-}
-
-.footer-column p {
-    text-align: center;
-    text-justify: center;
 }
 
 .footer-column ul li a {
     text-decoration: none;
     transition: color 0.3s ease;
-
+    color: inherit;
 }
 
-/* .instagram{ 
-     color:#7c0d80;
-     text-decoration: none;
-    transition:color 0.3s ease;
-}
-
- .facebook{
-     color:#7c0d80;
-     text-decoration: none;
-    transition:color 0.3s ease;
-}
-
- .tiktok{
-     color:#70d0ee;
-     text-decoration: none;
-    transition:color 0.3s ease;
-}
-
- .linkedin{
-     color:#7c0d80;
-     text-decoration: none;
-    transition:color 0.3s ease;
-}*/
 .footer-column ul li a:hover {
     color: #0d3572;
 }
 
-.footer-column form input,
-.footer-column form textarea {
+.footer-form form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer-form input,
+.footer-form textarea {
     margin-bottom: 1rem;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
-    max-width: 200%;
     box-sizing: border-box;
-
 }
 
-.footer-column form button {
-    /* display:flex; */
+.footer-form button {
     background-color: #066464;
     color: #eb801c;
     padding: 10px;
@@ -1300,12 +1313,31 @@ header {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-.footer-column form button:hover {
+.footer-form button:hover {
     background-color: #090ccc;
 }
 
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .footer-column ul {
         flex-direction: column;

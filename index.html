@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerico</title>
@@ -296,6 +297,34 @@
                 <p>This is the hidden content for my Curation Card</p>
             </div>
 
+
+            <!-- TECH SKILLS -->
+            <input type="checkbox" name="toggle" id="modal-tech" hidden>
+            <div class="skill-ring">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
+                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
+                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage">60%</text>
+                </svg>
+                <!-- hidden content -->
+                <label for="modal-tech" class="botton">Tech Skills</label>
+                <!-- </div> -->
+                <!-- Hidden inputs (radio buttons) -->
+            </div>
+            <div class="modal-tech">
+                <div class="modal-content">
+                    <label for="modal-nursing" class="close-modal">&times;</label>
+                    <img src="tec.jpg" alt="Project A Full Image">
+                    <p>2025 Let's Talk Tech alumnus and emerging web developer </p>
+                </div>
+            </div>
+            <div class="hidden-content" id="content-tech">
+                <img src="tec.jpg" alt="Project A Full Image">
+                <p>This is the hidden content for my Tech Card</p>
+            </div>
+
             <!-- NURSING AND MIDWIFERY -->
             <input type="checkbox" name="toggle" id="modal-nursing" hidden>
             <div class="skill-ring">
@@ -323,32 +352,8 @@
                 <p>This is the hidden content for my Leadership Card</p>
             </div>
 
-            <!-- TECH SKILLS -->
-            <input type="checkbox" name="toggle" id="modal-tech" hidden>
-            <div class="skill-ring">
-                <svg viewBox="0 0 36 36" class="circular-chart">
-                    <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                    <path class="circle" stroke-dasharray="94, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                    <text x="18" y="20.35" class="percentage">94%</text>
-                </svg>
-                <!-- hidden content -->
-                <label for="modal-tech" class="botton">Tech Skills</label>
-                <!-- </div> -->
-                <!-- Hidden inputs (radio buttons) -->
-            </div>
-            <div class="modal-tech">
-                <div class="modal-content">
-                    <label for="modal-tech" class="close-modal">&times;</label>
-                    <img src="daretv2.png" alt="Project A Full Image">
-                    <p>2025 Let's Talk Tech alumnus and emerging web developer</p>
-                </div>
-            </div>
-            <div class="hidden-tech" id="content-tech">
-                <img src="daretv2.png" alt="Project A Full Image">
-                <p>This is the hidden content for my Tech Card</p>
-            </div>
+
+
             <!-- LEADERSHIP -->
             <input type="checkbox" name="toggle" id="modal-leadership" hidden>
             <div class="skill-ring">
@@ -405,50 +410,56 @@
     </section>
 
     <!-- PROJECT SECTION -->
-    <section></section>
+
     <!-- FOOTER SECTION -->
     <footer class="footer">
+        <!-- Top section: Contact, Socials, etc. -->
         <div class="footer-grid">
             <div class="footer-column">
                 <h2>About</h2>
-                <p>Portfolio of Chea Gerald.
-                    <br>Visual Sory-teller and
-                    <br>Creative Health Advocate
-                    <br>using art for healing and impact
+                <p>
+                    Portfolio of Chea Gerald.<br>
+                    Visual Story-teller and<br>
+                    Creative Health Advocate<br>
+                    using art for healing and impact.
                 </p>
             </div>
+
             <div class="footer-column">
                 <h2>Socials</h2>
                 <ul>
                     <li><a class="instagram" href="https://www.instagram.com/gerico_arts?igsh=czJueXUxcndtMjAy"
-                            target="_blank" rel="reopener"><i class="fab fa-instagram"></i></a></li>
-                    <li><a class="facebook" href="https://www.facebook.com/chea.gerald" target="_blank"
-                            rel="reopener"><i class="fab fa-facebook"></i></a></li>
+                            target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/chea.gerald" target="_blank"><i
+                                class="fab fa-facebook"></i></a></li>
                     <li><a class="tiktok" href="https://www.tiktok.com/@cheagerald?_t=ZM-8sypTP2jxNm&_r=1"
-                            target="_blank" rel="reopener"><i class="fab fa-tiktok"></i></a></li>
-                    <li><a class="linkedin" href="https://www.linkedin.com/in/gericoco" target="_blank"
-                            rel="reopener"><i class="fab fa-linkedin"></i></a></li>
+                            target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/gericoco" target="_blank"><i
+                                class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
-            <!-- fab fa-instegram -->
+
             <div class="footer-column">
                 <h2>Contact Info</h2>
-                <p>Email:cheagerald@yahoo.com</p>
-                <p>Phone:+237670930126</p>
+                <p>Email: <a href="mailto:cheagerald@yahoo.com">cheagerald@yahoo.com</a></p>
+                <p>Phone: <a href="tel:+237670930126">+237 670 930 126</a></p>
             </div>
+
             <div class="footer-form">
                 <h2>Message Me</h2>
                 <form action="mailto:cheagerald@yahoo.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your name required">
-                    <input type="email" name="email" placeholder="Your email required">
-                    <textarea name="message" rows="5" placeholder="Your message required"></textarea>
+                    <input type="text" name="name" placeholder="Your name required" required>
+                    <input type="email" name="email" placeholder="Your email required" required>
+                    <textarea name="message" rows="5" placeholder="Your message required" required></textarea>
                     <button type="submit">Send</button>
                 </form>
             </div>
         </div>
-        <p>&copy; 2025 Chea Gerald. All rights reserved. <a href="/disclaimer.html">Disclaimer</a> </p>
+
+        <!-- Bottom section: Copyright & Disclaimer -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Chea Gerald. All rights reserved. |
+                <a href="/disclaimer.html">Disclaimer</a>
+            </p>
+        </div>
     </footer>
-
-</body>
-
-</html>
