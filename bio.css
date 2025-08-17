@@ -82,16 +82,33 @@ body {
     }
 
     #main-nav {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        background: #012a1f;
-        gap: 15px;
-        /* space between pills */
+        main-nav .nav-link {
+            display: flex;
+            /* enable flex centering */
+            justify-content: center;
+            /* center text horizontally */
+            align-items: center;
+            /* center text vertically */
+            width: 80px;
+            /* fixed width */
+            height: 80px;
+            /* fixed height */
+            border-radius: 50%;
+            /* perfect circle */
+            text-align: center;
+            /* center multi-line text */
+            flex-shrink: 0;
+            /* prevent shrinking on small screens */
+            padding: 0;
+            /* remove extra padding */
+            background: linear-gradient(135deg, #0a6646, #066451);
+            color: #fff;
+            font-size: 14px;
+            /* adjust for readability */
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
     }
 
     /* Nav items */
@@ -103,87 +120,80 @@ body {
 
     /* Nav links */
     #main-nav .nav-link {
-        display: block;
-        width: 100%;
-        padding: 15px 0;
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border-radius: 50px;
+        border-radius: 20px;
+        /* soft rounded edges */
         background: linear-gradient(135deg, #0a6646, #066451);
-        /* green gradient */
         color: #fff;
-        text-decoration: none;
-        transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* Active tab */
-    #main-nav .nav-link.active {
-        background: linear-gradient(135deg, #00ffcc, #0066ff);
-        color: #fff;
-    }
-
-    /* Hover / animation */
-    #main-nav .nav-link:hover {
-        background: linear-gradient(135deg, #00ffcc, #40e0d0);
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-    }
-
-    #main-nav .nav-link::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 5px;
-        transform: translateX(-50%) scaleX(0);
-        width: 60%;
-        height: 3px;
-        background: #fff;
-        border-radius: 2px;
-        transition: transform 0.3s ease;
-    }
-
-    #main-nav .nav-link:hover::after {
-        transform: translateX(-50%) scaleX(1);
-    }
-
-    /* Gradient glow behind links */
-    #main-nav .nav-link::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 50px;
-        background: linear-gradient(45deg, #00ffcc, #0066ff, #00ffcc, #40e0d0);
-        background-size: 400% 400%;
-        z-index: -1;
-        opacity: 0.3;
-        animation: gradientShift 8s linear infinite;
-    }
-
-    @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-
-
-
-    .profile-pic {
-        max-width: 90%;
-        margin: 10px auto;
+        font-weight: bold;
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
+        /* responsive font with Bootstrap */
+        transition: all 0.3s ease;
     }
 }
+
+/* Hover / active */
+#main-nav .nav-link.active,
+#main-nav .nav-link:hover {
+    background: linear-gradient(135deg, #00ffcc, #40e0d0);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+#main-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+#main-nav .nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Gradient glow behind links */
+#main-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #00ffcc, #0066ff, #00ffcc, #40e0d0);
+    background-size: 400% 400%;
+    z-index: -1;
+    opacity: 0.3;
+    animation: gradientShift 8s linear infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Optional: text wrap for long labels */
+#main-nav .nav-link span {
+    display: block;
+    word-break: break-word;
+}
+
+.profile-pic {
+    max-width: 90%;
+    margin: 10px auto;
+}
+
 
 /* Ensure body and html stretch fully */
 
@@ -1378,6 +1388,14 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    width: 150px;
+    /* base width */
+    height: 150px;
+    /* base height */
+
+
+    transition: transform 0.3s ease, filter 0.3s ease;
+    text-align: center;
 
 }
 
@@ -1394,6 +1412,9 @@ header {
     box-shadow: 0 4px 10px rgba(197, 116, 116, 0.1);
     transition: color 0.3s ease, text-shadow 0.3s ease;
     width: 200px;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    /* scales between 0.7rem and 1rem */
+
 }
 
 .botton:hover {
@@ -1464,14 +1485,18 @@ header {
 }
 
 .skill-ring:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+
+    transform: scale(1.05);
+    /* smaller scale to prevent overflow */
+    filter: brightness(1.1);
 }
 
 .circular-chart {
-
+    width: 80%;
+    /* % of skill-ring width */
+    height: auto;
     transform: rotate(0deg);
-    width: 200px;
+
     height: 200px;
     flex-shrink: 0;
     /* prevents shrinking in tight spaces */
@@ -1513,11 +1538,18 @@ header {
     transform: translateX(0);
 }
 
+font-size: clamp(0.7rem, 2vw, 1rem);
+/* scales between 0.7rem and 1rem */
+
+
 .skill-ring p {
     margin-top: 12px;
     font-weight: bold;
     color: #9e8910;
     font-family: 'Segoe UI. sans-serif';
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    /* scales between 0.7rem and 1rem */
+
 }
 
 .modal-leadership,
