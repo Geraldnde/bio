@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerico~Arts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Hero background */
+        .hero {
+            height: 100vh;
+            background: url('your-art-background.jpg') no-repeat center center/cover;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Gerico~Arts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <!-- HERO SECTION -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+        <div class="overlay p-4 rounded">
+            <h1 class="display-3 fw-bold">Gerico~Arts</h1>
+            <p class="lead mb-4">
+                Welcome to the side of me that plays with pencils until faces like yours show up in shades of grey.
+            </p>
+            <a href="#gallery" class="btn btn-light btn-lg px-4 py-2">🎨 View Gallery</a>
+        </div>
+    </header>
+
+    <!-- STYLE -->
+    <style>
+        .hero-section {
+            height: 100vh;
+            background: url('art1.jpg') center center / cover no-repeat fixed;
+            position: relative;
+        }
+
+        .hero-section .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            /* dark transparent overlay */
+            max-width: 700px;
+        }
+    </style>
+
+
+
+
+    <!-- GALLERY -->
+
+    <section id="gallery" class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">My Gallery</h2>
+            <p class="text-muted mb-5">A journey through sketches, process, and exhibitions.</p>
+
+            <!-- Featured Artworks Grid -->
+            <div class="row g-4 mb-5">
+                <!-- Artwork 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm">
+                        <img src="art5.png" class="card-img-top" alt="Pencil Portrait">
+                        <div class="card-body">
+                            <h5 class="card-title">"Safe Me"</h5>
+                            <p class="card-text text-muted">Pencil on A3, 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm">
+                        <img src="art7.jpeg" class="card-img-top" alt="Another Portrait">
+                        <div class="card-body">
+                            <h5 class="card-title">"Inner Demons"</h5>
+                            <p class="card-text text-muted">Charcoal on A4, 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm">
+                        <img src="art6.jpg" class="card-img-top" alt="Sketch">
+                        <div class="card-body">
+                            <h5 class="card-title">"Innocence"</h5>
+                            <p class="card-text text-muted">Graphite on A3, 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Artwork 4 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm">
+                        <img src="art10.jpg" class="card-img-top" alt="Sketch">
+                        <div class="card-body">
+                            <h5 class="card-title">"Portrait"</h5>
+                            <p class="card-text text-muted">Graphite on A3, 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Artwork 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm">
+                        <img src="art8.jpg" class="card-img-top" alt="Sketch">
+                        <div class="card-body">
+                            <h5 class="card-title">"Portrait"</h5>
+                            <p class="card-text text-muted">Graphite on A3, 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Artwork 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card shadow-sm">
+                        <img src="art11.jpg" class="card-img-top" alt="Sketch">
+                        <div class="card-body">
+                            <h5 class="card-title">"A Leap of Faith into the Abys"</h5>
+                            <p class="card-text text-muted">Graphite on A3, 2024</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Exhibitions -->
+                <h3 class="fw-bold mb-4">Exhibitions & Events</h3>
+                <div class="row g-4">
+                    <!-- Exhibition 1 -->
+                    <div class="col-md-6">
+                        <img src="images/exhibition1.jpg" class="img-fluid rounded shadow-sm" alt="Exhibition photo">
+                        <p class="mt-2 text-muted">Bamenda Art Fest 2024</p>
+                    </div>
+
+                    <!-- Exhibition 2 -->
+                    <div class="col-md-6">
+                        <img src="gun.png" class="img-fluid rounded shadow-sm" alt="Exhibition photo">
+                        <p class="mt-2 text-muted">University Arts Expo 2023</p>
+                    </div>
+                    <!-- Exhibition 4 -->
+                    <div class="col-md-6">
+                        <img src="exhi4.png" class="img-fluid rounded shadow-sm" alt="Exhibition photo">
+                        <p class="mt-2 text-muted">Local Community Gallery 2022</p>
+                    </div>
+                    <!-- Exhibition 3 -->
+                    <div class="col-md-6">
+                        <img src="exhi.jpg" class="img-fluid rounded shadow-sm" alt="Exhibition photo">
+                        <p class="mt-2 text-muted">Local Community Gallery 2022</p>
+                    </div>
+
+                    <!-- Exhibition 4 -->
+                    <div class="col-md-6">
+                        <img src="daretv1.jpg" class="img-fluid rounded shadow-sm" alt="Exhibition photo">
+                        <p class="mt-2 text-muted">Local Community Gallery 2022</p>
+                    </div>
+
+                    <!-- keep adding col-md-6 blocks for more exhibitions -->
+                </div>
+
+            </div>
+
+
+            <!-- TikTok Section -->
+
+            <h3 class="fw-bold mt-5 mb-3">More on TikTok</h3>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yourusername" data-video-id="1234567890"
+                style="max-width: 325px;min-width: 325px;">
+                <section> </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+
+            <!-- Add more artworks simply by repeating col-md-4 blocks -->
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">📬 Contact Me</h2>
+            <p class="mb-4">Let’s connect! You can reach me directly or follow my art journey:</p>
+
+            <div class="mb-4">
+                <p class="fs-5">📞 +237 670 930 126</p>
+            </div>
+
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <p class="fs-5 mb-0">Instagram: @gerico_arts</p>
+                <p class="fs-5 mb-0">Facebook: Chea Gerald</p>
+                <p class="fs-5 mb-0">LinkedIn: GericoCo</p>
+                <p class="fs-5 mb-0">TikTok: @cheagerald</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-black text-white text-center py-3">
+        <small>
+            © 2025 Gerico~Arts | All Rights Reserved 🎨 |
+            <a href="index.html" class="text-decoration-none text-white fw-bold">🏠 Home</a>
+        </small>
+    </footer>
+
+
+    <!-- Font Awesome (for social icons) -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

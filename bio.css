@@ -206,6 +206,7 @@ body {
     background-color: #0a364e;
     font-family: sans-serif;
     font-size: 10px;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -633,6 +634,11 @@ header {
     width: 100%;
 }
 
+#about-me-section h2 {
+    font-weight: bold;
+
+}
+
 #about-title {
     text-align: center;
     align-content: center;
@@ -947,10 +953,20 @@ header {
 #volunteerism {
     padding: 50px;
     position: relative;
-    background: linear-gradient(-45deg, #051b29, #0e0705, #35060a, #051b29);
+    background: linear-gradient(-45deg, #0d5631, #0e0705, #432b2d, #051b29);
     background-size: 400% 400%;
     animation: animate-volunteerismBG 15s ease infinite;
+    /* Make section span full width */
+
+    width: 100%;
+    max-width: 1400px;
+    /* optional, match other sections */
+    margin: 0 auto;
+    padding: 50px 20px;
+    /* more consistent with other sections */
 }
+
+
 
 @keyframes animate-volunteerismBG {
     0% {
@@ -1045,15 +1061,7 @@ header {
     align-items: stretch;
 }
 
-/* Make section span full width */
-#volunteerism {
-    width: 100%;
-    max-width: 1400px;
-    /* optional, match other sections */
-    margin: 0 auto;
-    padding: 50px 20px;
-    /* more consistent with other sections */
-}
+
 
 /* Ensure impact-box uses full column width */
 .impact-box {
@@ -1109,8 +1117,6 @@ header {
     padding: 0 10px;
     /* optional, keeps text from touching edges */
 
-
-
 }
 
 .impact-content h5 {
@@ -1149,7 +1155,10 @@ header {
     padding: 12px 30px;
     /* vertical + horizontal padding */
     border-radius: 8px;
-    background-color: #066464;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    /* background-color: #066464; */
     color: #f9a825;
     font-weight: bold;
     text-align: center;
@@ -1157,6 +1166,12 @@ header {
     line-height: 1;
     /* prevent extra spacing */
     transition: all 0.3s ease;
+}
+
+.volunteer-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    /* darker on hover */
+    color: #fff;
 }
 
 /* IMAGE SLIDES */
@@ -1215,19 +1230,29 @@ header {
     color: #fff;
 }
 
-.volunteerism-section {
+/* POSITION SECTION */
+#position {
     animation: animateBG 7s infinite;
-    background: linear-gradient(60deg, #300d3b, #03263b, #4b1808, #0b423a);
-    background-size: 300% 300%;
     color: #aec7c4;
     padding-top: 100px;
     padding-bottom: 100px;
+    position: relative;
+    background: linear-gradient(-45deg, #0d5631, #0e0705, #431831, #051b29);
+    background-size: 400% 400%;
+    animation: animate-volunteerismBG 15s ease infinite;
+    /* Make section span full width */
+
+    width: 100%;
+    max-width: 1400px;
+    /* optional, match other sections */
+    margin: 0 auto;
+    padding: 50px 20px;
+    /* more consistent with other sections */
 }
 
-.section-title {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    color: #f9a825;
-    margin-bottom: 20px;
+#position h2 {
+    font-weight: bold;
+
 }
 
 /* Cards */
@@ -1289,7 +1314,7 @@ header {
 
 /* PORTFOLIO SECTION */
 #portfolio {
-    padding: 60px 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1297,7 +1322,22 @@ header {
     text-align: center;
     animation: animateBG 7s infinite;
     background: linear-gradient(60deg, #300d3b, #03263b, #4b1808, #0b423a);
-    background-size: 300% 300%;
+
+
+    padding: 50px;
+    position: relative;
+    /* background: linear-gradient(-45deg, #051b29, #0e0705, #35060a, #051b29); */
+    background-size: 400% 400%;
+    animation: animate-volunteerismBG 15s ease infinite;
+    /* Make section span full width */
+
+    width: 100%;
+    max-width: 1400px;
+    /* optional, match other sections */
+    margin: 0 auto;
+
+    /* more consistent with other sections */
+
 }
 
 .section-title {
@@ -1305,6 +1345,11 @@ header {
     color: #9e8910;
     margin-bottom: 40px;
     font-family: 'Segoe UI, sans-serif';
+}
+
+#portfolio h2 {
+    font-weight: bold;
+
 }
 
 .skills-container {
