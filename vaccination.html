@@ -1,0 +1,86 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Vaccination Card</title>
+  <link rel="stylesheet" href="vaccination_style.css">
+</head>
+<body>
+  <h1>Cameroon Vaccination Simulator</h1>
+
+<label for="dob">Date of Birth:</label> 
+<input type="date" id="dob">
+<br><br>
+
+  <label for="ageSelect">Select child's age:</label>
+  <select id="ageSelect">
+    <option value="">--Choose Age--</option>
+    <option value="birth">Birth</option>
+    <option value="6w">6 weeks</option>
+    <option value="10w">10 weeks</option>
+    <option value="14w">14 weeks</option>
+    <option value="9m">9 months</option>
+    <option value="12m">12 months</option>
+    <option value="15m">15 months</option>
+    <option value="18m">18 months</option>
+    <option value="24m">24 months</option>
+    <option value="30m">30 months</option>
+    <option value="36m">36 months</option>
+    <option value="42m">42 months</option>
+    <option value="48m">48 months</option>
+    <option value="54m">54 months</option>
+    <option value="9y">9 years</option>
+  </select>
+
+
+  
+
+
+  <div class="card">
+    <h2>Virtual Vaccination Card</h2>
+    <table id="vaccinationTable">
+        <tr>
+            <th>Age</th>
+            <th>Vaccine</th>
+            <th>Date</th>
+            <th>Dose</th>
+            <th>Route</th>
+            <th>Site</th>
+            <th>Next Appointment</th>
+          </tr>
+         
+    </table>
+  </div>
+
+  <div class="vaccinate-controls">
+    <button id="vaccinateBtn">Vaccinate!</button>
+    <p id="feedback"></p>
+  </div>
+
+  <!-- 🔹 Add progress bar here -->
+<div id="progressContainer" style="width:100%; background:#eee; border-radius:4px; margin-top:10px;">
+    <div id="progressBar" style="width:0%; height:20px; background:#4caf50; border-radius:4px; text-align:center; color:white; font-size:12px;">
+    </div>
+  </div>
+  
+  <div class="card-controls">
+    <button id="downloadBtn">Download Card</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+  
+  
+<!-- Audio feedback elements -->
+<audio id="wrong_route" src="audio/wrong_route.mp3"></audio>
+<audio id="wrong_dose" src="audio/wrong_dose.mp3"></audio>
+<audio id="wrong_site" src="audio/wrong_site.mp3"></audio>
+<audio id="oral_vaccin" src="audio/oral_vaccin.mp3"></audio>
+<audio id="BCG_site" src="audio/BCG_site.mp3"></audio>
+<audio id="missed_name" src="audio/missed_name.mp3"></audio>
+<audio id="missed_field" src="audio/missed_field.mp3"></audio>
+<audio id="praise" src="audio/praise.mp3"></audio>
+<audio id="praise2" src="audio/praise2.mp3"></audio>
+
+  <!-- Link your JavaScript at the very end -->
+  <script src="app.js"></script>
+</body>
+</html>

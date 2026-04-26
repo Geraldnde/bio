@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WHO Partograph — Maternal Monitoring (Prototype)</title>
+    <link rel="stylesheet" href="patograph.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="panel left">
+            <h1 class="title">WHO Partograph</h1>
+            <h2 class="subtitle">Maternal & Fetal Monitoring</h2>
+
+            <section class="card">
+                <h3>New Assessment (choose which to plot)</h3>
+
+                <div class="row">
+                    <label>Hour (0–12)
+                        <input id="inputHour" type="number" min="0" max="12" step="1" value="0">
+                    </label>
+                    <label>Minute (0–59)
+                        <input id="inputMinute" type="number" min="0" max="59" step="1" value="0">
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>Cervical dilation (cm)
+                        <input id="inputDilation" type="number" min="0" max="10" step="0.5" value="1">
+                    </label>
+                    <label>Effacement (%)
+                        <input id="inputEffacement" type="number" min="0" max="100" step="5" value="0">
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>Fetal heart rate (bpm)
+                        <input id="inputFHR" type="number" min="60" max="220" step="1" value="140">
+                    </label>
+                    <label>Maternal pulse (bpm)
+                        <input id="inputPulse" type="number" min="30" max="220" step="1" value="90">
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>Blood pressure (systolic/diastolic)
+                        <input id="inputBP" type="text" placeholder="120/80" value="120/80">
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>Contractions (number in 10 min)
+                        <input id="inputContractionsNumber" type="number" min="0" max="5" step="1" value="0">
+                    </label>
+                    <label>Contraction duration (s)
+                        <input id="inputContractionDuration" type="number" min="0" step="1" value="0">
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>Contraction type
+                        <select id="inputContractionType">
+                            <option value="weak">Weak (0–20 s)</option>
+                            <option value="mild">Mild (20–40 s)</option>
+                            <option value="strong">Strong (&gt;40 s)</option>
+                        </select>
+                    </label>
+                </div>
+
+                <fieldset class="checkbox-row">
+                    <legend>Plot these</legend>
+                    <label><input type="checkbox" id="chkCervical" checked> Cervical dilation</label>
+                    <label><input type="checkbox" id="chkContractions" checked> Contractions</label>
+                    <label><input type="checkbox" id="chkPulse" checked> Maternal pulse</label>
+                    <label><input type="checkbox" id="chkBP" checked> Blood pressure</label>
+                    <label><input type="checkbox" id="chkFHR" checked> Fetal heart rate</label>
+                </fieldset>
+
+                <div class="buttons">
+                    <button id="btnPlotInput" class="btn primary">Plot Assessment</button>
+                    <button id="btnReset" class="btn neutral">Reset All</button>
+                    <button id="btnExportAll" class="btn success">Export Cervical PNG</button>
+                </div>
+            </section>
+        </aside>
+
+        <main class="panel right">
+            <section class="graph">
+                <h3>Cervical dilation (WHO partograph) — 12 hrs (800×400)</h3>
+                <canvas id="cervicalCanvas" width="800" height="400"></canvas>
+            </section>
+
+            <section class="graph">
+                <h3>Contractions — columns per 30 min (24 cols) — vertical boxes 0–5</h3>
+                <canvas id="contractionCanvas" width="800" height="150"></canvas>
+            </section>
+
+            <section class="graph">
+                <h3>Maternal BP & Pulse — BP arrows; Pulse (pink)</h3>
+                <canvas id="bpPulseCanvas" width="800" height="300"></canvas>
+            </section>
+
+            <section class="graph">
+                <h3>Fetal Heart Rate (bpm)</h3>
+                <canvas id="fhrCanvas" width="800" height="200"></canvas>
+            </section>
+        </main>
+    </div>
+
+    <script src="virtual_room.js"></script>
+</body>
+
+</html>

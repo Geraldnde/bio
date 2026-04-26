@@ -1,0 +1,104 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0a364e, #01121b);
+  color: #aec7c4;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.card {
+  background-color: rgba(5, 20, 30, 0.9);
+  border: 2px solid #00ffcc;
+  padding: 20px;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+#ancVisits {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: rgba(5, 20, 30, 0.9);
+  border: 2px solid #00ffcc;
+  color: #fff;
+}
+
+#ancVisits th, #ancVisits td {
+  border: 1px solid #00ffcc;
+  padding: 6px;
+  text-align: center;
+}
+
+#ancVisits th {
+  background-color: #022a1f;
+  color: #00ffcc;
+}
+
+/* Compact input sizes */
+#ancVisits input[type="date"] {
+  width: 120px;   /* smaller date picker */
+}
+
+#ancVisits input[type="text"],
+#ancVisits input[type="number"] {
+  width: 80px;    /* compact text/number fields */
+}
+
+#ancVisits textarea {
+  width: 150px;   /* remarks box slightly wider */
+  height: 40px;
+  resize: vertical;
+}
+
+button {
+  background: linear-gradient(135deg, #00ffcc, #40e0d0);
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #40e0d0, #00ffcc);
+  color: #fff;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+#progressContainer {
+  width: 100%;
+  background: #eee;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+#progressBar {
+  width: 0%;
+  height: 20px;
+  background: #4caf50;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+}
+.card {
+  background-color: rgba(5, 20, 30, 0.9);
+  border: 2px solid #00ffcc;
+  padding: 20px;
+  width: 95%;   /* wider to fit all columns */
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow-x: auto; /* scroll if too wide */
+}
+
+#ancDemographics td input,
+#ancHistory td input,
+#ancMedical td textarea {
+  width: 95%; /* stretch inside their cells */
+}
+

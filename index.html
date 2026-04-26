@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Gerico</title>
+    <title>Health Simulator</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,13 +30,13 @@
                             <a class="nav-link active py-2" href="#home">Home</a>
                         </li>
                         <li class="nav-item flex-fill text-center">
-                            <a class="nav-link py-2" href="#about-me-section">About</a>
+                            <a class="nav-link py-2" href="#about">About</a>
                         </li>
                         <li class="nav-item flex-fill text-center">
-                            <a class="nav-link py-2" href="#portfolio">Portfolio</a>
+                            <a class="nav-link py-2" href="#portfolio">Vaccination Tool</a>
                         </li>
                         <li class="nav-item flex-fill text-center">
-                            <a class="nav-link py-2" href="#volunteerism">Volunteerism</a>
+                            <a class="nav-link py-2" href="#volunteerism">ANC Card</a>
                         </li>
                         <li class="nav-item flex-fill text-center">
                             <a class="nav-link py-2" href="#footer-contact">Contact</a>
@@ -49,499 +49,233 @@
             <!-- Hero section with my profile pic -->
             <section class="me-section section-overlay">
                 <div class="me-content">
-                    <h1 class="intro"><span class="me-intro-text">Hello, I'm
+                    <h1 class="intro"><span class="me-intro-text">Welcome to 
                             <br>
-                        </span> <span class="my-name">Chea Gerald Nde T.</span>
+                        </span> <span class="my-name">MediNova Learning Space</span>
                     </h1>
-                    <p> </p>
-                    <!-- <p>Artist | Health Advocate | Tech Enthusiast | Curator</p> -->
-                </div>
+                    <p> Empowering communities with interactive health simulations
+.</p>
+                     </div>
             </section>
+            <!-- Optional: modern banner instead of marquee -->
+
         </div>
         <!-- sliding text -->
         <marquee>
-            <h1 id="home" class="welcome">I'm a self-thought pencil artist, a student nurse-midwife, curator,
-                founder of Gifted Hands and Healing Voices, an Administrative/Communication and
-                Data assistant for the Global Arts in Medicine Fellowship,
-                an emerging Tech enthusiast and volunteer in several organizations including
-                Glorious Care Foundation</h1>
+            <h1 id="home" class="welcome">Your digital hub for healthcare learning!!!</h1>
         </marquee>
 
-
-
-
-        <!-- ABOUT ME SECTION -->
-        <section id="about-me-section" class="about-section">
+        <section id="about" class="about-section">
             <div class="title-wrapper">
-                <h2 id="about-title">About Me</h2>
+              <h2 id="about-title">About the Platform</h2>
             </div>
             <div class="intro-text">
-                <p>I am a craft in progress, a pure work of art in the making.
-                    <br> Every step of my journey is a brushstroke, every experience, a note in the melody of becoming.
-                    <br> I'm delighted to share this space with you, and it is truly an honor to have you here before
-                    the exhibition.
-                    <br>What part of me will you be admiring today - the Healer, the Artist or the Teacher?
-                </p>
+              <p>
+                This platform is a dynamic hub for interactive health learning and community support. 
+                It offers digital tools that simulate real‑world healthcare practices, strengthen patient care, and empower mothers, 
+                students, and health workers through accessible knowledge. Beginning with vaccination schedules and appointment management, 
+                it now includes labour monitoring and maternal health simulations, with more modules on the way — building a comprehensive ecosystem 
+                for healthcare education across our two nations and the wider region. By reflecting shared experiences and challenges, 
+                the platform fosters collaboration, enhances training, and supports healthier communities beyond borders.
+              </p>
             </div>
-            <!-- Div box for both bio and paragragh -->
-            <div class="about-me-container">
-                <div class="profile-pic">
-                    <img id="Gerico" src="profile.png" alt="Profile Photo">
-                    <div class="btn"><a href="My_Journey.html" class="btn-link">
-                            <span class="default-text">Who I am</span>
-                            <span class="hover-text">Discover More</span></a></div>
-                </div>
-                <div class="profile-pic">
-                    <img id="Gerico" src="me.JPG" alt="Profile Photo">
-                    <div class="btn"><a href="My_Journey.html" class="btn-link">
-                            <span class="default-text">My Journey</span>
-                            <span class="hover-text">Walk with me </span></a></div>
-                </div>
-                <div class="profile-pic">
-                    <img id="Gerico" src="me11.png" alt="Profile Photo">
-                    <div class="btn"><a href="My_Vision.html" class="btn-link">
-                            <span class="default-text">See Vision</span>
-                            <span class="hover-text">Let's fly together!</span></a></div>
-                </div>
-                <!-- Div box for all the text -->
-                <div class="about-me-text">
-                    <!-- paragraph 1 -->
-                </div>
+          
+            <div class="about-container">
+              <!-- Vaccination Tool -->
 
+
+              <div class="learning_tool">
+                <i class="fa-solid fa-syringe fa-5x"></i>
+                <div class="btn">
+                    <a href="#" class="btn-link" onclick="launchTutorial()">
+                        <span class="default-text">Vaccination Tool</span>
+                        <span class="hover-text">Try Simulator</span>
+                      </a>
+                      
+                </div>
+              </div>
+
+              <!-- Labour Simulation -->
+<!-- Labour Simulation -->
+<div class="learning_tool">
+  <i class="fa-solid fa-baby fa-5x"></i>
+  <div class="btn">
+    <a href="#" class="btn-link" onclick="launchLabourTutorial(event)">
+      <span class="default-text">Labour Simulation</span>
+      <span class="hover-text">Try Partograph</span>
+    </a>
+  </div>
+</div>
+
+          
+              <!-- ANC CARD -->
+<div class="learning_tool">
+  <i class="fa-solid fa-file-medical fa-5x"></i>
+  <div class="btn">
+    <a href="ANC.html" class="btn-link">
+      <span class="default-text">ANC Card</span>
+      <span class="hover-text">Track Pregnancy</span>
+    </a>
+  </div>
+</div>
+
+          
+              <!-- Future Modules -->
+              <div class="learning_tool">
+                <i class="fa-solid fa-clipboard-list fa-5x"></i>
+                <div class="btn">
+                  <a href="#future-tool" class="btn-link">
+                    <span class="default-text">Future Modules</span>
+                    <span class="hover-text">Coming Soon</span>
+                  </a>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
+        </section> <!-- end of About section -->
+        
+        
 
-        <!-- VOLUNTEERISM AND IMPACTS SECTION-->
-        <section id="volunteerism">
-            <div class="title-wrapper">
-                <h2 id="about-title">IMPACTS & INITIATIVES</h2>
+        <div id="tutorialModal">
+  <video id="tutorialVid" autoplay muted controls>
+    <source src="vaccination_tutorial.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-                <div class="row g-4">
-                    <!-- Activity 1 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="impact-box">
-                            <div class="impact-slide">
-                                <img src="art4.png" alt="community work">
-                                <img src="art5.png" alt="community work">
-                                <img src="art7.jpeg" alt="community work">
-                                <img src="art1.jpg" alt="community work">
-                                <img src="arts.jpg" alt="community work">
-                            </div>
-                            <div class="impact-content">
-                                <h5>Arts & Culture</h5>
-                                <p>
-                                    Sharing creative skills with the community through workshops, exhibitions, and
-                                    performances.
-                                </p>
-                                <a href="arts.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+  <!-- Skip always visible -->
+  <button class="skip-btn" onclick="skipTutorial()">Skip Tutorial</button>
 
-                    <!-- Activity 2: Community Service -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="impact-box">
-                            <div class="impact-slide">
-                                <img src="workshop.jpg" alt="community work">
-                                <img src="workshop2.jpg" alt="community work">
-                                <img src="workshop3.png" alt="community work">
-                                <img src="First Visit to Special Needs Entrepreneur Group.jpg" alt="community work">
-                            </div>
-                            <div class="impact-content">
-                                <h5>Community Service</h5>
-                                <p>
-                                    Helping in local initiatives, mentoring youths, and promoting sustainable practices.
-                                </p>
-                                <a href="gifted.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+  <!-- Practice/Scenario hidden until video ends -->
+  <div id="actions">
+    <button class="module-btn" onclick="startPractice()">Practice</button>
+    <button class="module-btn" onclick="enterScenario()">Enter Scenario</button>
+  </div>
+</div>
+<div id="labourModal" class="video-container" style="display:none;">
+  <video id="labourVid" playsinline>
+    <source src="patograph_tutorial.mp4" type="video/mp4">
+  </video>
 
-                    <!-- Activity 3: Capacity Building -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="impact-box">
-                            <div class="impact-slide">
-                                <img src="tech3.jpg" alt="capacity1">
-                                <img src="tec.jpg" alt="capacity1">
-                                <img src="tech4.jpg" alt="capacity1">
-                                <img src="tech7.jpg" alt="capacity1">
-                                <img src="tech.jpg" alt="capacity1">
-                            </div>
-                            <div class="impact-content">
-                                <h5>Capacity Building</h5>
-                                <p>
-                                    Engaging in trainings and hands-on programs.
-                                </p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+  <!-- Skip button inside the modal -->
+  <button id="skipLabourBtn" class="skip-btn" onclick="skipLabour()">Skip Intro</button>
 
-                </div>
-            </div>
-        </section>
+  <!-- End-of-video buttons -->
+  <div id="labourActions" class="button-overlay">
+  <button class="btn-overlay" onclick="enterSimulation()">Enter Simulation</button>
+</div>
 
 
-
-        <!-- POSITION SECTION -->
-        <section id="position" class="position-section py-5">
-            <div class="title-wrapper">
-                <h2 id="about-title">POSITIONS</h1>
-            </div>
-            <div class="container-fluid">
-                <div class="row g-4 justify-content-center">
-                    <!-- Founder -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div id="Founder" class="position-card">
-                            <i class="fa-solid fa-user-nurse"></i>
-                            <h3>Founder and Creative Lead, Gifted Hands and Healing Voices</h3>
-                            <p>Bamenda, Cameroon | 2025</p>
-                        </div>
-                    </div>
-
-                    <!-- Nurse -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div id="Nurse" class="position-card">
-                            <i class="fa-solid fa-stethoscope"></i>
-                            <h3>Nursing & Midwifery Student, University of Bamenda</h3>
-                            <p>Bamenda, Cameroon | 2022 - Present</p>
-                        </div>
-                    </div>
-
-                    <!-- Global Arts -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div id="Global-Arts" class="position-card">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                            <h3>Volunteer Artist & Mental Health Advocate, Global Arts in Medicine Fellowship</h3>
-                            <p>Remote | 2024 - Present</p>
-                        </div>
-                    </div>
-
-                    <!-- Intern -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div id="Intern" class="position-card">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <h3>Intern Nurse, St Mary Soledad Catholic Hospital, Mankon</h3>
-                            <p>Bamenda, Cameroon | 2023 - Present</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-        <!-- PORTFOLIO SECTION -->
-        <section id="portfolio">
-            <!-- <h2 class="section-title">My Portfolio of Skills</h2> -->
-            <div class="title-wrapper">
-                <h2 id="about-title">PORTFOLIO</h1>
-            </div>
-            <div class="skills-container">
-                <!--1 TEACHING-->
-                <input type="checkbox" name="toggle" id="modal-teaching" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="96, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">96%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-teaching" class="botton">Teaching</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-teaching">
-                    <div class="modal-content">
-                        <label for="modal-teaching" class="close-modal">&times;</label>
-                        <img src="Teaching2.jpg" alt="Project A Full Image">
-                        <p>Field work </p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-nursing">
-                    <img src="daretv2.png" alt="Project A Full Image">
-                    <p></p>
-                </div>
-
-                <!-- 2 PENCIL ART -->
-                <input type="checkbox" name="toggle" id="modal-art" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="98, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">98%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-art" class="botton">Pencil Art</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-art">
-                    <div class="modal-content">
-                        <label for="modal-art" class="close-modal">&times;</label>
-                        <img src="artss.jpg" alt="Project A Full Image">
-                        <p>Where I go silent, my pencils go louder </p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-art">
-                    <img src="artss.jpg" alt="Project A Full Image">
-                    <p>This is the hidden content for my Leadership Card</p>
-                </div>
-
-                <!-- DATA ANALYSIS -->
-                <input type="checkbox" name="toggle" id="modal-data" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="67, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">67%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-data" class="botton">Data Analysis</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-data">
-                    <div class="modal-content">
-                        <label for="modal-data" class="close-modal">&times;</label>
-                        <img src="data.jpg" alt="Project A Full Image">
-                        <p>Field work </p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-data">
-                    <img src="data.jpg" alt="Project A Full Image">
-                    <p>This is the hidden content for my Leadership Card</p>
-                </div>
-
-                <!-- PROJECT MANAGEMENT -->
-                <input type="checkbox" name="toggle" id="modal-project" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="70, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">70%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-project" class="botton">Project Management</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-project">
-                    <div class="modal-content">
-                        <label for="modal-project" class="close-modal">&times;</label>
-                        <img src="project.JPG" alt="Project A Full Image">
-                        <p>Highlights of my projects </p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-project">
-                    <img src="project.JPG" alt="Project A Full Image">
-                    <p>This is the hidden content for my Project Card</p>
-                </div>
-
-                <!-- CURATIVE SKILLS -->
-                <input type="checkbox" name="toggle" id="modal-curation" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="95, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">95%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-curation" class="botton">Curative Skills</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-curation">
-                    <div class="modal-content">
-                        <label for="modal-curation" class="close-modal">&times;</label>
-                        <img src="daretv2.png" alt="Project A Full Image">
-                        <p>Curating an in-person session at the Dare Tv Show</p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-nursing">
-                    <img src="daretv2.png" alt="Project A Full Image">
-                    <p>This is the hidden content for my Curation Card</p>
-                </div>
-
-
-                <!-- TECH SKILLS -->
-                <input type="checkbox" name="toggle" id="modal-tech" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">60%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-tech" class="botton">Tech Skills</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-tech">
-                    <div class="modal-content">
-                        <label for="modal-nursing" class="close-modal">&times;</label>
-                        <img src="tec.jpg" alt="Project A Full Image">
-                        <p>2025 Let's Talk Tech alumnus and emerging web developer </p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-tech">
-                    <img src="tec.jpg" alt="Project A Full Image">
-                    <p>This is the hidden content for my Tech Card</p>
-                </div>
-
-                <!-- NURSING AND MIDWIFERY -->
-                <input type="checkbox" name="toggle" id="modal-nursing" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">60%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-nursing" class="botton">Nursing and Midwifery</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-nursing">
-                    <div class="modal-content">
-                        <label for="modal-nursing" class="close-modal">&times;</label>
-                        <img src="nurse.jpg" alt="Project A Full Image">
-                        <p>A glimpse of my dedication in saving lives </p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-nursing">
-                    <img src="nurse.png" alt="Project A Full Image">
-                    <p>This is the hidden content for my Leadership Card</p>
-                </div>
-
-
-
-                <!-- LEADERSHIP -->
-                <input type="checkbox" name="toggle" id="modal-leadership" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="94, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">94%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-leadership" class="botton">Leadership</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-leadership">
-                    <div class="modal-content">
-                        <label for="modal-leadership" class="close-modal">&times;</label>
-                        <img src="daretv2.png" alt="Project A Full Image">
-                        <p>This is my leadership journey - expressed visually and powerfully</p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-leadership">
-                    <img src="daretv2.png" alt="Project A Full Image">
-                    <p>This is the hidden content for my Leadership Card</p>
-                </div>
-                <!-- FACILITATOR SKILLS -->
-                <input type="checkbox" name="toggle" id="modal-facilitator" hidden>
-                <div class="skill-ring">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path class="circle" stroke-dasharray="94, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0
-                    31.831a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="20.35" class="percentage">94%</text>
-                    </svg>
-                    <!-- hidden content -->
-                    <label for="modal-facilitator" class="botton">Facilitator</label>
-                    <!-- </div> -->
-                    <!-- Hidden inputs (radio buttons) -->
-                </div>
-                <div class="modal-facilitator">
-                    <div class="modal-content">
-                        <label for="modal-facilitator" class="close-modal">&times;</label>
-                        <img src="daretv2.png" alt="Project A Full Image">
-                        <p>This is my leadership journey - expressed visually and powerfully</p>
-                    </div>
-                </div>
-                <div class="hidden-content" id="content-facilitator">
-                    <img src="daretv2.png" alt="Project A Full Image">
-                    <p>This is the hidden content for my Leadership Card</p>
-                </div>
-            </div>
-        </section>
-
-
+</div>
+           
+          
+             
+               
         <!-- FOOTER SECTION -->
-        <footer id="footer-contact" class="footer">
-            <!-- Top section: Contact, Socials, etc. -->
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h2>About</h2>
-                    <p>
-                        Portfolio of Chea Gerald.<br>
-                        Visual Story-teller and<br>
-                        Creative Health Advocate<br>
-                        using art for healing and impact.
-                    </p>
-                </div>
+        <!-- FOOTER SECTION -->
+<footer id="footer-contact" class="footer">
+  <div class="footer-grid">
+    <!-- Left column: About -->
+    <div class="footer-column">
+      <h2>About the Platform</h2>
+      <p>
+        This platform is a collaborative initiative for interactive health learning,
+        developed by a team across two nations. It provides digital tools that simulate
+        real-world healthcare practices, strengthen maternal and child health, and empower
+        students, mothers, and health workers through accessible knowledge.
+      </p>
+    </div>
 
-                <div class="footer-column">
-                    <h2>Socials</h2>
-                    <ul>
-                        <li><a class="instagram" href="https://www.instagram.com/gerico_arts?igsh=czJueXUxcndtMjAy"
-                                target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a class="facebook" href="https://www.facebook.com/chea.gerald" target="_blank"><i
-                                    class="fab fa-facebook"></i></a></li>
-                        <li><a class="tiktok" href="https://www.tiktok.com/@cheagerald?_t=ZM-8sypTP2jxNm&_r=1"
-                                target="_blank"><i class="fab fa-tiktok"></i></a></li>
-                        <li><a class="linkedin" href="https://www.linkedin.com/in/gericoco" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
+    <!-- Middle column: Contact -->
+    <div class="footer-column">
+      <h2>Contact Info</h2>
+      <p>Email: <a href="mailto:cheagerald@yahoo.com">medinova@yahoo.com</a></p>
+      
+      <h2>Socials</h2>
+      <ul>
+        <li><a class="instagram" href="https://www.instagram.com/gerico_arts" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a class="facebook" href="https://www.facebook.com/chea.gerald" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="tiktok" href="https://www.tiktok.com/@cheagerald" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+        <li><a class="linkedin" href="https://www.linkedin.com/in/gericoco" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
 
-                <div class="footer-column">
-                    <h2>Contact Info</h2>
-                    <p>Email: <a href="mailto:cheagerald@yahoo.com">cheagerald@yahoo.com</a></p>
-                    <p>Phone: <a href="tel:+237670930126">+237 670 930 126</a></p>
-                </div>
+    <!-- Right column: Message form -->
+    <div class="footer-column">
+      <h2>Message Us</h2>
+      <form action="mailto:cheagerald@yahoo.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name required" required>
+        <input type="email" name="email" placeholder="Your email required" required>
+        <textarea name="message" rows="5" placeholder="Your message required" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
 
-                <div class="footer-form">
-                    <h2>Message Me</h2>
-                    <form action="mailto:cheagerald@yahoo.com" method="post" enctype="text/plain">
-                        <input type="text" name="name" placeholder="Your name required" required>
-                        <input type="email" name="email" placeholder="Your email required" required>
-                        <textarea name="message" rows="5" placeholder="Your message required" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-            </div>
+  <!-- Bottom section -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Health Learning Platform Team. All rights reserved. |
+      <a href="/disclaimer.html">Disclaimer</a>
+    </p>
+    <p class="tagline">Building maternal health knowledge across borders</p>
+  </div>
+</footer>
 
-            <!-- Bottom section: Copyright & Disclaimer -->
-            <div class="footer-bottom">
-                <p>&copy; 2025 Chea Gerald. All rights reserved. |
-                    <a href="/disclaimer.html">Disclaimer</a>
-                </p>
-            </div>
-        </footer>
     </main>
-</body>
 
-</html>
+
+    
+    <script>
+        function launchTutorial() {
+          document.getElementById("tutorialModal").style.display = "block";
+          const vid = document.getElementById("tutorialVid");
+          vid.play();
+          vid.onended = () => {
+            document.getElementById("actions").style.display = "block";
+          };
+        }
+      
+        function skipTutorial() {
+  const vid = document.getElementById("tutorialVid");
+  vid.pause();                        // stop playback
+  vid.currentTime = vid.duration;     // jump to end
+  document.getElementById("actions").style.display = "block"; // show buttons
+}
+      
+        function startPractice() {
+          window.location.href = "vaccination.html";
+        }
+      
+        function enterScenario() {
+          window.location.href = "vaccination.html#scenario";
+        }
+
+        function launchLabourTutorial() {
+  document.getElementById("labourModal").style.display = "block";
+  const vid = document.getElementById("labourVid");
+  vid.play();
+  vid.onended = () => {
+    document.getElementById("labourActions").classList.add("show");
+  };
+}
+
+function skipLabour() {
+  const vid = document.getElementById("labourVid");
+  const actions = document.getElementById("labourActions");
+  vid.pause();
+  vid.currentTime = vid.duration;
+  actions.classList.add("show");
+  // hide video background
+  vid.style.display = "none";
+}
+
+
+function enterSimulation() {
+  document.getElementById("labourModal").style.display = "none";
+  window.location.href = "patograph.html"; // make sure this file exists in the same folder
+}
+
+      </script>
+      
+      </body>
+      </html>
+      

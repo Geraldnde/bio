@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual ANC Card</title>
+  <link rel="stylesheet" href="anc_style.css">
+</head>
+<body>
+
+<h1>Cameroon ANC Simulator</h1>
+
+<!-- Patient Demographics -->
+<section class="card">
+  <h2>Patient Demographics</h2>
+  <table id="ancDemographics">
+    <tr><td>Name</td><td><input type="text"></td></tr>
+    <tr><td>Age</td><td><input type="number"></td></tr>
+    <tr><td>Address</td><td><input type="text"></td></tr>
+    <tr><td>Village of Origin</td><td><input type="text"></td></tr>
+    <tr><td>Marital Status</td><td><input type="text"></td></tr>
+    <tr><td>Profession</td><td><input type="text"></td></tr>
+    <tr><td>Ethnicity</td><td><input type="text"></td></tr>
+    <tr><td>Gravida / Para</td><td><input type="text"></td></tr>
+    <tr><td>LMP</td><td><input type="date"></td></tr>
+    <tr><td>EDD</td><td><input type="date"></td></tr>
+  </table>
+</section>
+
+<!-- Past Obstetric History -->
+<section class="card">
+  <h2>Past Obstetric History</h2>
+  <table id="ancHistory">
+    <tr>
+      <th>Date</th><th>Gestation</th><th>Mode of Delivery</th><th>Birth Weight</th><th>Sex</th>
+    </tr>
+    <tr>
+      <td><input type="date"></td>
+      <td><input type="text" placeholder="Term/Preterm"></td>
+      <td><input type="text" placeholder="NVD/CS"></td>
+      <td><input type="number" placeholder="kg"></td>
+      <td><input type="text" placeholder="M/F"></td>
+    </tr>
+  </table>
+  <button id="addHistoryBtn">➕ Add History</button>
+</section>
+
+<!-- Past Medical & Surgical History -->
+<section class="card">
+  <h2>Past Medical & Surgical History</h2>
+  <table id="ancMedical">
+    <tr><td>Past Medical Conditions</td><td><textarea></textarea></td></tr>
+    <tr><td>Past Surgical History</td><td><textarea></textarea></td></tr>
+    <tr><td>Family History</td><td><textarea></textarea></td></tr>
+    <tr><td>Social History</td><td><textarea></textarea></td></tr>
+  </table>
+</section>
+
+<!-- ANC Visit Records -->
+<section class="card">
+  <h2>ANC Visit Records</h2>
+  <table id="ancVisits">
+    <tr>
+      <th>Date</th><th>BP</th><th>Weight</th><th>Fundal Height</th><th>FHR</th>
+      <th>Presentation</th><th>Position</th><th>Hb</th><th>Sugar</th>
+      <th>Albumin</th><th>Oedema</th><th>Remarks</th>
+    </tr>
+    <tr>
+      <td><input type="date"></td>
+      <td><input type="text" placeholder="120/80"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text" placeholder="Cephalic/Breech"></td>
+      <td><input type="text" placeholder="LOA/ROA"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><textarea></textarea></td>
+    </tr>
+  </table>
+  <button id="addVisitBtn">➕ Add Visit</button>
+</section>
+
+<div class="controls">
+  <button id="saveBtn">Save ANC Card</button>
+  <button id="resetBtn">Reset</button>
+</div>
+
+<div id="progressContainer">
+  <div id="progressBar">0%</div>
+</div>
+
+<p id="feedback"></p>
+
+<script src="anc.js"></script>
+</body>
+</html>

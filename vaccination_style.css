@@ -1,0 +1,115 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #0a364e, #01121b);
+    color: #aec7c4;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #40e0d0;
+    margin-bottom: 30px;
+}
+
+/* Card container */
+.card {
+    background-color: rgba(5, 20, 30, 0.9);
+    border: 2px solid #00ffcc;
+    padding: 20px;
+    width: 75vw;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0,255,204,0.4);
+    border-radius: 12px;
+    color: #fff;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+th, td {
+    border: 1px solid #00ffcc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #022a1f;
+    color: #00ffcc;
+}
+
+/* Inputs */
+select, input[type="date"] {
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 1em;
+    border: 2px solid #00ffcc;
+    border-radius: 6px;
+    background-color: #01121b;
+    color: #fff;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #00ffcc, #40e0d0);
+    border: none;
+    color: #01121b;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #40e0d0, #00ffcc);
+    color: #fff;
+    box-shadow: 0 0 15px #00ffcc;
+    transform: scale(1.05);
+}
+
+/* Feedback text */
+#feedback {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #f9a825;
+    text-shadow: 0 0 8px #f9a825;
+}
+
+/* Correct / Wrong highlights */
+.correct {
+    background-color: rgba(0, 255, 128, 0.2);
+}
+
+.wrong {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .card {
+        width: 95vw;
+        padding: 10px;
+    }
+}
+/* Make date picker inputs more visible */
+input[type="date"] {
+    background-color: #ffffff;   /* white background */
+    color: #000000;              /* black text */
+    border: 1px solid #333333;   /* dark border */
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  input[type="date"]:focus {
+    outline: 2px solid #007bff;  /* blue outline when focused */
+  }
+  
